@@ -1,0 +1,76 @@
+---
+title: "README-RegR"
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+```{r, echo = FALSE}
+cat(paste0("Last Update: ",Sys.time()))
+```
+
+# RegR
+Perform basic functions for regression analysis, including scatter plot, linear, lowess, loess, segmented, breakpoint regression. Logarithm transformation is allowed even if variables with 0s by add 1 or 100.
+
+Installation
+-----------------
+'# Installing just this library (should get all dependancies)
+library(devtools) 
+install.git_hub("kevinlzheng/RegR")
+
+'# Installing dependancies separately
+'# set CRAN mirror 
+'#(loads gui in R; in R-Studio select ## of mirror in Console pane)
+'# If know mirror can use "ind=" in 2nd statement and comment out (prefix line with #) the first.
+chooseCRANmirror()
+'#chooseCRANmirror(ind=21)
+'################################################
+'# must run "chooseCRANmirror()" by itself before running the rest of the script
+
+'# libraries to be installed
+data.packages = c(                  
+                  "devtools"        # install helper for non CRAN libraries
+                  ,"installr"       # install helper
+                  ,"digest"         # caused error in R v3.2.3 without it
+                  ,"dataRetrieval"  # loads USGS data into R
+                  ,"knitr"          # create documents in other formats (e.g., PDF or Word)
+                  ,"doBy"           # summary stats
+                  ,"zoo"            # z's ordered observations, use for rolling sd calc
+                  ,"htmltools"      # needed for knitr and doesn't always install properly with Pandoc
+                  ,"rmarkdown"      # needed for knitr and doesn't always install properly with Pandoc
+                  ,"htmltools"      # a dependency that is sometimes missed.
+                  ,"evaluate"       # a dependency that is sometimes missed.
+                  ,"highr"          # a dependency that is sometimes missed.
+                  ,"rmarkdown"      # a dependency that is sometimes missed.
+                  )
+                  
+lapply(data.packages,function(x) install.packages(x))
+
+'## pandoc
+require(installr)
+install.pandoc()
+
+
+Purpose
+--------------
+The scatter plot and multiple regression functions have been used for a long time for various projects. 
+
+Usage
+------------
+  n = 50
+  x <- rlnorm(n) + 1:n
+  x <- (x - min(x))/max(x)
+  y <- n + 1:n + (rnorm(n))*0.2*n
+  scatter.plot(data = data.frame(x,y), xvar= "x", yvar = "y", add.fit = "linear", 
+     ylim = range(y), log = "x", x.add = 100, add.r2=T)
+
+
+

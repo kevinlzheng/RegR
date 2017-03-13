@@ -1,0 +1,19 @@
+Package: RegR
+Title: Collective Functions to Perform Generalized Linear Model Graphs
+Version: 0.0.0.9000
+Authors@R: person("Lei", "Zheng", email = "Lei.Zheng@Tetratech.com", role = c("aut","cre"))
+Description: This package includes several useful functions to perform most used gradient
+  type of analyses, e.g., linear regression, logistic regression, and multiple regression.
+  Predictions and inferences can also be made from the same functions. Regression Tree and
+  quantile regression are also options in these functions. 
+Depends:
+    R (>= 3.1.2),
+    bootstrap,
+    rpart,
+    quantreg,
+    MASS,
+License: What license is it under?
+Encoding: UTF-8
+URL: https://github.com/kevinlzheng/RegR
+LazyData: true
+RoxygenNote: 5.0.1
