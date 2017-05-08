@@ -50,6 +50,7 @@ data.packages = c(
                   ,"evaluate"       # a dependency that is sometimes missed.
                   ,"highr"          # a dependency that is sometimes missed.
                   ,"rmarkdown"      # a dependency that is sometimes missed.
+                  ,"RColorBrewer"   # for coloring boxplot 
                   )
                   
 lapply(data.packages,function(x) install.packages(x))
