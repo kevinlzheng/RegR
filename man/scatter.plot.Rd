@@ -114,10 +114,11 @@ Returns .
  sum((x-xmean)^2)) = sum(x^2)- (sum(x))^2/length(x)
 }
 \description{
-This function performed basic regression analysis, and confidence intervals, prediction intervals, 
-and segmented regression, change point analysis (through rpart) and confidence bounds.
-It also uses log transformation if users choose so. 
-This version also added a capacity for transforming percent values (where 0 is probably the minimum).
+This function performed basic regression analysis with the option to add confidence intervals and
+prediction intervals; alternative regression approaches, e.g., segmented regression, change point
+analysis (through rpart) and confidence bounds, quantile regression, and lowess regression splines.
+This version also added a capacity for transforming percent values (where 0 is probably the minimum)
+by adding 1 or 100 before log transformation if users choose so. 
 Any x variable with 0s and log is true, the add 1 to the original or 100 times of the original.
 }
 \examples{
@@ -137,4 +138,3 @@ scatter.plot(data = data.frame(x,y), xvar= "x", yvar = "y", add.fit = "linear", 
 \keyword{point,}
 \keyword{regression}
 \keyword{scatter}
-

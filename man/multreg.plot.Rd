@@ -77,4 +77,3 @@ scatter.plot(data = data.frame(x,y), xvar= "x", yvar = "y", add.fit = "linear", 
 \keyword{multiple}
 \keyword{regression}
 \keyword{regression,}
-
