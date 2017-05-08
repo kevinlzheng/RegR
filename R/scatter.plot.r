@@ -268,8 +268,6 @@ cor.pos <- function(x, y,...) {
                       round(brk.pt,rounder1))        
       }
       rect(brk.pt[2], min(y),brk.pt[3], max(y), col = "#11111120", border =NA)
-    #  print(summary(seg.model)) 
-    #  print(brk.pt)
       }
    if(!add) {
    if(addaxes) {           # add axes 
